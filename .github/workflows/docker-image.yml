@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build docker --tag Olfi01/metalpyports
+      run: docker build docker --tag olfi01/metalpyports
     - name: Push the Docker image
       if: ${{ github.event_name == 'push' }}
       run: docker push Olfi01/metalpyports
