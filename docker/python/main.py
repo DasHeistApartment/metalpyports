@@ -3,7 +3,7 @@ import portforwardlib
 
 
 def main():
-    config.load_kube_config()
+    config.load_incluster_config()
     v1_core = client.CoreV1Api()
     w = watch.Watch()
     for event in w.stream(v1_core.list_service_for_all_namespaces):
